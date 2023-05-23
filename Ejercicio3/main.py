@@ -28,7 +28,7 @@ def main():
     talleres = cargar_talleres(archivo_talleres)
 
     manejador_personas = ManejadorPersonas()
-    manejador_inscripciones = ManejadorInscripciones()
+    manejador_inscripciones = ManejadorInscripciones(100)
 
     while True:
         print("Menú de opciones:")

@@ -60,4 +60,3 @@ class Facultad:
     def __str__(self):
         cadena= self.getNombre()+" "+self.getDireccion+" "+self.getLocalidad()+" "+self.getTelefono()
         return cadena
-        

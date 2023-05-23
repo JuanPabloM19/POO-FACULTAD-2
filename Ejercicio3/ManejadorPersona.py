@@ -10,7 +10,13 @@ class ManejadorPersonas:
         self._personas.append(persona)
 
     def buscar_persona(self, dni):
-        for persona in self._personas:
-            if persona.get_dni() == dni:
-                return persona
-        return None
+        i = 0
+        while i < len(self._personas):
+            persona = self._personas[i]
+            if persona._dni == dni:
+                return i, persona
+            i += 1
+        return None, None
+
+    def get_personas(self):
+        return self._personas
