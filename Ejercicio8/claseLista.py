@@ -18,29 +18,49 @@ class Lista:
         return self.__agentes[posicion]
 
     def generar_listado_docentes_investigadores_por_area(self, area_investigacion: str) -> List[DocenteInvestigador]:
-        return [agente for agente in self.__agentes if isinstance(agente, DocenteInvestigador) and agente.__área_investigación == area_investigacion]
+        listado = []
+        i = 0
+        while i < len(self.__agentes):
+            agente = self.__agentes[i]
+            if isinstance(agente, DocenteInvestigador) and agente.__área_investigación == area_investigacion:
+                listado.append(agente)
+            i += 1
+        return listado
 
     def generar_listado_agentes_por_categoria(self, categoria_investigacion):
-        return [agente for agente in self.__agentes if isinstance(agente, DocenteInvestigador) and agente.get_categoria_programa() == categoria_investigacion]
+        listado = []
+        i = 0
+        while i < len(self.__agentes):
+            agente = self.__agentes[i]
+            if isinstance(agente, DocenteInvestigador) and agente.get_categoria_programa() == categoria_investigacion:
+                listado.append(agente)
+            i += 1
+        return listado
 
     def recorrer_lista_e_generar_listado(self):
         listado = []
-        for agente in self.__agentes:
+        i = 0
+        while i < len(self.__agentes):
+            agente = self.__agentes[i]
             sueldo = agente.get_sueldo_basico() + agente.get_antiguedad() * 0.1
             if isinstance(agente, DocenteInvestigador):
                 sueldo += agente.get_importe_extra()     
             cargo = agente.get_cargo()
             catedra = agente.get_catedra()
             listado.append((agente.get_nombre(), agente.get_apellido(), cargo, catedra, sueldo))
+            i += 1
         return listado
+
+    def buscar_agente_por_cuil(self, cuil):
+        i = 0
+        while i < len(self.__agentes):
+            agente = self.__agentes[i]
+            if agente.get_cuil() == cuil:
+                return agente
+            i += 1
+        return None
 
     def almacenar_agentes_en_archivo(self):
         with open('personal.json', 'w') as archivo:
             agentes_dict = [agente.to_dict() for agente in self.__agentes]
             json.dump(agentes_dict, archivo)
-
-    def buscar_agente_por_cuil(self, cuil):
-        for agente in self.__agentes:
-            if agente.get_cuil() == cuil:
-                return agente
-        return None
