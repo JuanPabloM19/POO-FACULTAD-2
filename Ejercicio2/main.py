@@ -10,11 +10,11 @@ def main():
 
     while True:
         print("Menú de opciones:")
-        print("1. Registrar un helado vendido")
-        print("2. Mostrar los 5 sabores más pedidos")
-        print("3. Estimar gramos vendidos de un sabor")
-        print("4. Mostrar sabores vendidos por tamaño")
-        print("5. Calcular importe total recaudado por tipo de helado")
+        print("1. Registrar un helado vendido (instancia de la clase helado)")
+        print("2. Mostrar el nombre de los 5 sabores de helado más pedidos")
+        print("3. Ingresar un número de sabor y estimar el total de gramos vendidos. Para un helado se estima la cantidad de gramos de cada sabor dividiendo los gramos del helado en la cantidad de sabores. Por ejemplo, si se vendió un helado de 1000 gr de chocolate, frutilla, limón y americana. Se estima que en este helado se vendió de cada sabor 1000 / 4 = 250gr.")
+        print("4. Ingresar por teclado un tipo de helado y mostrar los sabores vendidos en ese tamaño considerando todos los helados vendidos")
+        print("5. Determinar el importe total recaudado por la Heladería, por cada tipo de helado")
         print("6. Salir")
 
         opcion = int(input("Ingrese el número de la opción deseada: "))

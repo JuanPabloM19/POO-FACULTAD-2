@@ -7,13 +7,13 @@ def main():
 
     while True:
         print("Menú de opciones:")
-        print("1. Insertar un vehículo")
-        print("2. Agregar un vehículo")
-        print("3. Mostrar información de un vehículo por posición")
-        print("4. Modificar precio base de un vehículo por patente y mostrar precio de venta")
-        print("5. Mostrar vehículo más económico")
-        print("6. Mostrar todos los vehículos")
-        print("7. Guardar vehículos en el archivo")
+        print("1. Insertar un vehículo en la colección en una posición determinada")
+        print("2. Agregar un vehículo a la colección")
+        print("3. Dada una posición de la Lista: Mostrar por pantalla qué tipo de objeto se encuentra almacenado en dicha posición ")
+        print("4. Dada la patente de un vehículo usado, modificar el precio base, y luego mostrar el precio de venta.")
+        print("5. Mostrar todos los datos, incluido el importe de venta, del vehículo más económico. ")
+        print("6. Mostrar para todos los vehículos que la concesionaria tiene a la venta, modelo, cantidad de puertas e importe de venta")
+        print("7. Almacenar los objetos de la colección Lista en el archivo “vehiculos.json”.")
         print("8. Salir")
 
         opcion = int(input("Ingrese el número de la opción que desea realizar: "))

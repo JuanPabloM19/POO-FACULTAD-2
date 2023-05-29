@@ -50,12 +50,12 @@ def crear_agente():
 
 def menu(lista_agentes: Lista):
     while True:
-        print("1. Insertar agente a la colección")
-        print("2. Agregar agente a la colección")
-        print("3. Mostrar agente en posición:")
-        print("4. Generar listado de docentes investigadores por área de investigación")
-        print("5. Generar listado de agentes por categoría de investigación")
-        print("6. Recorrer la colección y generar listado con nombre, apellido, tipo de Agente y sueldo")
+        print("1. Insertar a agentes a la colección")
+        print("2. Agregar agentes a la colección")
+        print("3. Dada una posición de la lista: Mostrar por pantalla que tipo de agente se encuentra almacenado en dicha posición")
+        print("4. Ingresar por teclado el nombre de una carrera y generar un listado ordenado por nombre con todos los datos de los agentes que se desempeñan como docentes investigadores.")
+        print("5. Dada un área de investigación, contar la cantidad de agentes que son docente_investigador, y la cantidad de investigadores que trabajen en ese área.")
+        print("6. Recorrer la colección y generar un listado que muestre nombre y apellido, tipo de Agente y sueldo de todos los agentes, ordenado por apellido.")
         print("7. Almacenar los datos de todos los agentes en el archivo personal.json")
         print("8. Salir")
 

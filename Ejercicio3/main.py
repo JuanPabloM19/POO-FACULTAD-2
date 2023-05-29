@@ -32,11 +32,11 @@ def main():
 
     while True:
         print("Menú de opciones:")
-        print("1. Inscribir persona en un taller")
-        print("2. Consultar inscripción")
-        print("3. Listar inscriptos en un taller")
-        print("4. Registrar pago")
-        print("5. Guardar inscripciones")
+        print("1. Inscribir una persona en un taller: Se registra la inscripción (con el atributo pago en False) y la cantidad de vacantes del taller debe ser actualizada ")
+        print("2. Consultar inscripción: Ingresar el DNI de una persona, si está inscripta mostrar el nombre del taller en el que se inscribió y el monto que adeuda ")
+        print("3. Consultar inscriptos: Ingresar el identificador de un taller y listar los datos de los alumnos que se inscribieron en él ")
+        print("4. Registrar pago: Ingresar el DNI de una persona y registrar el pago (dar al atributo pago el valor True) ")
+        print("5. Guardar inscripciones: Generar un nuevo archivo que contenga los siguientes datos de las inscripciones: DNI de la persona, idTaller, fechaInscripcion y pago ")
         print("6. Salir")
         opcion = int(input("Ingrese la opción deseada: "))
 
